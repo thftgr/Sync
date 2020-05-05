@@ -25,8 +25,8 @@ namespace Sync.Tools.ConfigurationAttribute
                 {
                     foreach (var str in m_val.Split(new[] { SplitSeparator }, StringSplitOptions.RemoveEmptyEntries))
                     {
-                        if (!ContainValue(str))
-                        {   
+                        if (!ContainValue(m_val))
+                        {
                             CheckFailedNotify(val);
                             return false;
                         }

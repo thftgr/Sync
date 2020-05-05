@@ -21,7 +21,7 @@ namespace Sync.Tools
         public static readonly string CurrentFullSourceEXEPath = Path.Combine(CurrentPath, SourceEXEName);
         public static readonly string CurrentFullUpdateEXEPath = Path.Combine(CurrentPath, UpdateEXEName);
         public static bool IsUpdated = false;
-        internal static PluginCommand update => PluginCommand.Instance;
+        internal static PluginCommand update;
 
         public static bool ApplyUpdate(bool needUpdate)
         {

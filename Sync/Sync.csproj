@@ -68,8 +68,8 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SharpRaven, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpRaven.2.4.0\lib\net45\SharpRaven.dll</HintPath>
@@ -107,6 +107,99 @@
     <Compile Include="MessageFilter\FilterPriorityAttribute.cs" />
     <Compile Include="MessageFilter\MessageDispatcher.cs" />
     <Compile Include="MessageFilter\MessageManager.cs" />
+    <Compile Include="OfficalPlugins\BanManager\BanManagerPlugin.cs" />
+    <Compile Include="OfficalPlugins\BanManager\Ban\BanInfo.cs" />
+    <Compile Include="OfficalPlugins\BanManager\Ban\BanManager.cs" />
+    <Compile Include="OfficalPlugins\BanManager\Danmaku\BanClientFilter.cs" />
+    <Compile Include="OfficalPlugins\BanManager\DefaultLanguage.cs" />
+    <Compile Include="OfficalPlugins\BanManager\Osu\BanServerFilter.cs" />
+    <Compile Include="OfficalPlugins\BanManager\Properties\AssemblyInfo.cs" />
+    <Compile Include="OfficalPlugins\BeatmapSuggest\BeatmapDownloadScheduler.cs" />
+    <Compile Include="OfficalPlugins\BeatmapSuggest\BeatmapSuggestPlugin.cs" />
+    <Compile Include="OfficalPlugins\BeatmapSuggest\Danmaku\BeatmapSuggestFilter.cs" />
+    <Compile Include="OfficalPlugins\BeatmapSuggest\DefaultLanguage.cs" />
+    <Compile Include="OfficalPlugins\BeatmapSuggest\Osu\BeatmapSuggestDownloadFilter.cs" />
+    <Compile Include="OfficalPlugins\BeatmapSuggest\Properties\AssemblyInfo.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigGuiPlugin.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationI18n\I18nManager.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\BaseConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\BoolConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\ColorConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\FloatConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\FontConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\IntegerConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\ListConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\PathConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\SliderConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemCreators\StringConfigurationItemCreator.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationItemFactory.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigurationRegion\ConfigurationPanel.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\ConfigWindow.xaml.cs">
+      <DependentUpon>ConfigWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OfficalPlugins\ConfigGUI\DefaultLanguage.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\MultiSelect\MultiSelectComboBox.xaml.cs">
+      <DependentUpon>MultiSelectComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigWindow.g.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigWindow.g.i.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\obj\Debug\MultiSelect\MultiSelectComboBox.g.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\obj\Debug\MultiSelect\MultiSelectComboBox.g.i.cs" />
+    <Compile Include="OfficalPlugins\ConfigGUI\Properties\AssemblyInfo.cs" />
+    <Compile Include="OfficalPlugins\DefaultGUI\DefaultGUI.cs" />
+    <Compile Include="OfficalPlugins\DefaultGUI\frmDefault.cs" />
+    <Compile Include="OfficalPlugins\DefaultGUI\frmDefault.Designer.cs">
+      <DependentUpon>frmDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficalPlugins\DefaultGUI\Language.cs" />
+    <Compile Include="OfficalPlugins\DefaultGUI\Properties\AssemblyInfo.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Clients\ConsoleReciveSendOnlyClient.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Clients\DirectOSUIRCBot.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Commands\BaseCommand.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\DefaultPlugin.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Filters\DefaultFormat.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Filters\GiftReceivePeeker.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Filters\MessageDeadLoopLimiter.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Filters\OnlineChangePeeker.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\IngameOverlayPlugin.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Language.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Properties\AssemblyInfo.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\BiliBili.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\BiliBiliDanmuku.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_dm\DanmakuLoader.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_dm\DanmakuModel.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_dm\Events.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_dm\GiftRank.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_dm\utils.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_sender\BiliBiliSender.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_sender\HTMLViewForm.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_sender\HTMLViewForm.Designer.cs">
+      <DependentUpon>HTMLViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\Douyutv\DouyuClient.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\Douyutv\DouyuDanmaku.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\Douyutv\Douyutv.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\Twitch\Twitch.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\Twitch\TwitchAuthenticationDialog.cs" />
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\Twitch\TwitchAuthenticationDialog.Designer.cs">
+      <DependentUpon>TwitchAuthenticationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficalPlugins\DefaultPlugin\Sources\Twitch\TwitchIRCIO.cs" />
+    <Compile Include="OfficalPlugins\NowPlaying\Languages.cs" />
+    <Compile Include="OfficalPlugins\NowPlaying\MSNHandler.cs" />
+    <Compile Include="OfficalPlugins\NowPlaying\NowPlaying.cs" />
+    <Compile Include="OfficalPlugins\NowPlaying\NpFilter.cs" />
+    <Compile Include="OfficalPlugins\NowPlaying\OsuFileParser.cs" />
+    <Compile Include="OfficalPlugins\NowPlaying\Properties\AssemblyInfo.cs" />
+    <Compile Include="OfficalPlugins\PPQuery\PPQuery.cs" />
+    <Compile Include="OfficalPlugins\PPQuery\Properties\AssemblyInfo.cs" />
+    <Compile Include="OfficalPlugins\RecentlyUserQuery\Danmaku\MessageRecorderFilter.cs" />
+    <Compile Include="OfficalPlugins\RecentlyUserQuery\DefaultLanguage.cs" />
+    <Compile Include="OfficalPlugins\RecentlyUserQuery\MessageRecorder.cs" />
+    <Compile Include="OfficalPlugins\RecentlyUserQuery\Osu\GetUserIdFilter.cs" />
+    <Compile Include="OfficalPlugins\RecentlyUserQuery\Osu\MessageRecorderControlFilter.cs" />
+    <Compile Include="OfficalPlugins\RecentlyUserQuery\Properties\AssemblyInfo.cs" />
+    <Compile Include="OfficalPlugins\RecentlyUserQuery\RecentlyMessageQueryPlugin.cs" />
     <Compile Include="Tools\SentryHelper.cs" />
     <Compile Include="Tools\StartupArgument.cs" />
     <Compile Include="Tools\StartupHelper.cs" />
@@ -147,8 +240,6 @@
     <Compile Include="Tools\SyncIO\Logger.cs" />
     <Compile Include="Tools\PluginConfiuration.cs" />
     <Compile Include="Tools\StringElement.cs" />
-    <Compile Include="Tools\Utils\ConfigurationHelper.cs" />
-    <Compile Include="Tools\Utils\PluginsHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -164,11 +255,63 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigGUI.g.resources" />
+    <EmbeddedResource Include="OfficalPlugins\DefaultGUI\frmDefault.resx">
+      <DependentUpon>frmDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficalPlugins\DefaultPlugin\Sources\BiliBili\Bilibili_sender\HTMLViewForm.resx">
+      <DependentUpon>HTMLViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficalPlugins\DefaultPlugin\Sources\Twitch\TwitchAuthenticationDialog.resx">
+      <DependentUpon>TwitchAuthenticationDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="OfficalPlugins\.gitignore" />
+    <None Include="OfficalPlugins\.vs\Sync_with_Plugins\v16\.suo" />
+    <None Include="OfficalPlugins\BanManager\BanManager.csproj" />
+    <None Include="OfficalPlugins\BeatmapSuggest\BeatmapSuggest.csproj" />
+    <None Include="OfficalPlugins\ConfigGUI\ConfigGUI.csproj" />
+    <None Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigGUI.csproj.CoreCompileInputs.cache" />
+    <None Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigGUI.csprojAssemblyReference.cache" />
+    <None Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigGUI_MarkupCompile.cache" />
+    <None Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigGUI_MarkupCompile.lref" />
+    <None Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigWindow.baml" />
+    <None Include="OfficalPlugins\ConfigGUI\obj\Debug\MultiSelect\MultiSelectComboBox.baml" />
+    <None Include="OfficalPlugins\DefaultGUI\DefaultGUI.csproj" />
+    <None Include="OfficalPlugins\DefaultGUI\obj\Debug\DefaultGUI.csprojAssemblyReference.cache" />
+    <None Include="OfficalPlugins\DefaultPlugin\DefaultPlugin.csproj" />
+    <None Include="OfficalPlugins\DefaultPlugin\obj\Debug\DefaultPlugin.csprojAssemblyReference.cache" />
+    <None Include="OfficalPlugins\DefaultPlugin\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="OfficalPlugins\ISSUE_TEMPLATE.md" />
+    <None Include="OfficalPlugins\NowPlaying\NowPlaying.csproj" />
+    <None Include="OfficalPlugins\NowPlaying\obj\Debug\NowPlaying.csprojAssemblyReference.cache" />
+    <None Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\.signature.p7s" />
+    <None Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\LICENSE.md" />
+    <None Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\Newtonsoft.Json.12.0.3.nupkg" />
+    <None Include="OfficalPlugins\packages\SharpRaven.2.4.0\.signature.p7s" />
+    <None Include="OfficalPlugins\packages\SharpRaven.2.4.0\SharpRaven.2.4.0.nupkg" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\.signature.p7s" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\MonoAndroid10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\MonoTouch10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\xamarinios10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\xamarinmac20\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\xamarintvos10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\xamarinwatchos10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\ref\MonoAndroid10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\ref\MonoTouch10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\ref\xamarinios10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\ref\xamarinmac20\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\ref\xamarintvos10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\ref\xamarinwatchos10\_._" />
+    <None Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\System.Runtime.InteropServices.RuntimeInformation.4.3.0.nupkg" />
+    <None Include="OfficalPlugins\PPQuery\PPQuery.csproj" />
+    <None Include="OfficalPlugins\README.md" />
+    <None Include="OfficalPlugins\RecentlyUserQuery\obj\Debug\RecentlyMessageQuery.csprojAssemblyReference.cache" />
+    <None Include="OfficalPlugins\RecentlyUserQuery\RecentlyMessageQuery.csproj" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -196,6 +339,70 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigGUI.csproj.FileListAbsolute.txt" />
+    <Content Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigGUI.dll" />
+    <Content Include="OfficalPlugins\ConfigGUI\obj\Debug\ConfigGUI.pdb" />
+    <Content Include="OfficalPlugins\DefaultPlugin\Newtonsoft.Json.dll" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\net20\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\net35\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\netstandard1.3\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\netstandard1.3\Newtonsoft.Json.xml" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.xml" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.xml" />
+    <Resource Include="OfficalPlugins\packages\Newtonsoft.Json.12.0.3\packageIcon.png" />
+    <Content Include="OfficalPlugins\packages\SharpRaven.2.4.0\lib\net35\SharpRaven.dll" />
+    <Content Include="OfficalPlugins\packages\SharpRaven.2.4.0\lib\net40\SharpRaven.dll" />
+    <Content Include="OfficalPlugins\packages\SharpRaven.2.4.0\lib\net45\SharpRaven.dll" />
+    <Content Include="OfficalPlugins\packages\SharpRaven.2.4.0\lib\net471\SharpRaven.dll" />
+    <Content Include="OfficalPlugins\packages\SharpRaven.2.4.0\lib\netstandard2.0\SharpRaven.dll" />
+    <Resource Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\dotnet_library_license.txt" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\win8\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\wpa81\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\runtimes\aot\lib\netcore50\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\runtimes\unix\lib\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\runtimes\win\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\runtimes\win\lib\netcore50\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\runtimes\win\lib\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Resource Include="OfficalPlugins\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\ThirdPartyNotices.txt" />
+    <Content Include="OfficalPlugins\Sync_with_Plugins.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="OfficalPlugins\ConfigGUI\ConfigWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OfficalPlugins\ConfigGUI\MultiSelect\MultiSelectComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OfficalPlugins\BanManager\obj\Debug\TempPE\" />
+    <Folder Include="OfficalPlugins\BeatmapSuggest\obj\Debug\TempPE\" />
+    <Folder Include="OfficalPlugins\Build\Plugins\" />
+    <Folder Include="OfficalPlugins\ConfigGUI\obj\Debug\TempPE\" />
+    <Folder Include="OfficalPlugins\DefaultGUI\obj\Debug\TempPE\" />
+    <Folder Include="OfficalPlugins\DefaultPlugin\obj\Debug\TempPE\" />
+    <Folder Include="OfficalPlugins\NowPlaying\obj\Debug\TempPE\" />
+    <Folder Include="OfficalPlugins\PPQuery\obj\Debug\TempPE\" />
+    <Folder Include="OfficalPlugins\RecentlyUserQuery\obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

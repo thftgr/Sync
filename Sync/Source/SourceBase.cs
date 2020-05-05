@@ -14,13 +14,22 @@ namespace Sync.Source
     /// </summary>
     public abstract class SendableSource : SourceBase
     {
-        //if sendablesource is able send message now.
-        public virtual bool SendStatus { get => Status == SourceStatus.CONNECTED_WORKING; }
-
+        public bool SendStatus { get; protected set; } = false;
         public SendableSource(string Name, string Author) : base(Name, Author)
         {
-
         }
+
+        internal void send(IMessageBase message)
+        {
+            if (!SendStatus)
+            {
+                IO.CurrentIO.WriteColor(DefaultI18n.LANG_SendNotReady, ConsoleColor.Red);
+                return;
+            }
+            Send(message);
+        }
+
+
 
         internal void login(string user, string password)
         {
